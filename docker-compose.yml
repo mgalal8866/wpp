@@ -11,7 +11,6 @@ services:
       - ./wppconnect_tokens:/usr/src/wpp-server/tokens
     ports:
       - "21465:21465"
-    entrypoint: [ "bash", "-c", "bash /usr/install-dependencies.sh" ]
 
 volumes:
   wppconnect_tokens: {}      
