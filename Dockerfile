@@ -11,6 +11,9 @@ RUN apk update && \
     make \
     libc6-compat \
     && rm -rf /var/cache/apk/*
+COPY install-dependencies.sh ./install-dependencies.sh
+RUN bash ./install-dependencies.sh
+
 RUN yarn install --production --pure-lockfile && \
     yarn add sharp --ignore-engines && \
     yarn cache clean
