@@ -14,6 +14,7 @@
     "changelog:update": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "commit": "git-cz",
     "dev": "tsx watch src/server.ts",
+    "postinstall": "npm rebuild sharp --build-from-source"
     "docs": "tsx src/swagger.ts",
     "license:add": "license-check-and-add add",
     "license:check": "license-check-and-add check",
